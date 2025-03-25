@@ -7,7 +7,7 @@ void skipchar(string ans,string original,int idx){
         return;
     }
     char ch=original[idx];
-    if(ch=='a') skipchar(ans,original,idx+1);
+    if(ch=='a') skipchar(ans,original,id x+1);
     else skipchar(ans+ch,original,idx+1);
 }
 int main(){

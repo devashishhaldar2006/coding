@@ -1,7 +1,7 @@
 #include<iostream>
 #include<climits>
 using namespace std;
-void display(int *a,int n){
+void display(int *a,int n){//pass by reference
     for(int i=0;i<=n;i++){
         cout<<a[i]<<' ';
     }

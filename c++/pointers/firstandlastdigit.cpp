@@ -7,7 +7,6 @@ void find(int n,int *a,int *b){
         }
         *a=n;
         return;
-
 }
 int main(){
     int n;
@@ -17,6 +16,4 @@ int main(){
     int *ptr1=&firstdigit,*ptr2=&lastdigit;
     find(n,ptr1,ptr2);
     cout<<firstdigit<<" "<<lastdigit;
-
-
 }

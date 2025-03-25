@@ -17,6 +17,7 @@ int main(){
     cout<<str<<endl;
     string s="Helloss";
     // reverse(s.begin(),s.end());//reverse the string
-    // reverse(s.begin()+2,s.end()-1);//reverse from 2 to end-1
-    reverse(s.begin()+2,s.begin()+5); //reverse from 2 to 4
+    reverse(s.begin()+2,s.end()-1);//reverse from 2 to end-1
+    // reverse(s.begin()+2,s.begin()+5); //reverse from 2 to 4
+    cout<<s<<endl;
 }

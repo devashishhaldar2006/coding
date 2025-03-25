@@ -6,5 +6,4 @@ int main(){
     v.push_back({13,14,15,16});
     cout<<endl;
     v.pop_back();
-    
 }

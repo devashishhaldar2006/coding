@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
+    //we use i==j for diagonal elements and i+j==n+1 for anti diagonal elements
     int n;
     cout<<"enter no of stars:";
     cin>>n;

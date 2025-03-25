@@ -6,5 +6,4 @@ int main(){
     int n=123;
     string s=to_string(n);
     cout<<s.length()<<endl; // 3
-    
 }

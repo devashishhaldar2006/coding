@@ -32,7 +32,7 @@ int main(){
     //     cout<<endl;
     // }
 
-    //without extra space
+    //without extra space(this doesnt take much space)
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
             arr[i][j]=arr[i][j]+arr1[i][j];

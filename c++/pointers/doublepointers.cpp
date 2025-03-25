@@ -10,7 +10,4 @@ int main(){
     cout<<p<<endl;//address of ptr
     cout<<*p<<endl;// ptr value
     cout<<**p<<endl;//>>>9
-
-
-
 }

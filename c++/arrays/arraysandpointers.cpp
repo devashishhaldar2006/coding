@@ -16,9 +16,9 @@ int main(){
     ptr=arr;//ptr is poinitng towards 1st element
 
     *ptr=9;
-    ptr++;
+    ptr++;//moves pointer to next element
     *ptr=8;
-    ptr--;
+    ptr--;//moves back to previous element
     for(int i=0;i<=size;i++){
         cout<<*ptr<<' ';
         ptr++;

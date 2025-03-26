@@ -14,7 +14,7 @@ public:
             return;
         }
         helper(nums,ans,finalAns,idx+1);
-        ans.push_back(nums[idx]);
+       ans.push_back(nums[idx]);
         helper(nums,ans,finalAns,idx+1);
     }
     vector<vector<int>> subsets(vector<int>& nums) {

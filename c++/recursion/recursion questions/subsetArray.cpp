@@ -1,14 +1,22 @@
 #include<iostream>
 #include<vector>
-#include<string>
 using namespace std;
-bool isPalindrome(string s,int i,int j){
+void printSubset(int arr[],int n,int idx,vector<int> ans){
   //base case
-  if(i>j) return true;
-  if(s[i]!=s[j]) return false;
-  else return isPalindrome(s,i+1,j-1);
+  if(idx==n){
+    for(int i=0;i<ans.size();i++){
+      cout<<ans[i]<<" ";
+    }
+    cout<<endl;
+    return;
+  }
+  printSubset(arr,n,idx+1,ans);
+  ans.push_back(arr[idx]);
+  printSubset(arr,n,idx+1,ans);
 }
 int main(){
-  string s="mom";
-  cout<<isPalindrome(s,0,s.length()-1);
+  int arr[]={1,2,3};
+  int n=sizeof(arr)/sizeof(arr[0]);
+  vector<int> v;
+  printSubset(arr,n,0,v);
 }

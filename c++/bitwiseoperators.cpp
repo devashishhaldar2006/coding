@@ -21,6 +21,4 @@ int main(){
     int l=3,z=5;
     int sum2=l+(z++);
     cout<<sum2<<endl;
-
-
 }

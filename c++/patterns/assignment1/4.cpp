@@ -5,11 +5,9 @@ int main(){
     cout<<"enter no of stars:";
     cin>>n;
     for(int i=1;i<=n;i++){
-        for(int j=1;j<=n-i;j++){
-            cout<<" ";
-        }
-        for(int k=1;k<=2*i-1;k++){
-            cout<<"*";
+        for(int j=1;j<=i;j++){
+            if(i%2==0) cout<<(char)(j+64)<<" ";
+            else cout<<j<<" ";
         }
         cout<<endl;
     }

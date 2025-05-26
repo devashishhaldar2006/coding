@@ -7,8 +7,8 @@ void display(int *a,int n){//pass by reference
     }
     cout<<endl;
 }
-void update(int *a,int n){
-    a[0]=4;
+void update(int b[],int n){
+    b[0]=4;
 }
 int main(){
     int arr[]={2,4,5,3,1,7,8};

@@ -13,7 +13,7 @@ int main(){
         cout<<i[ptr]<<' ';
     }
     cout<<endl;
-    ptr=arr;//ptr is poinitng towards 1st element
+    ptr=arr;//ptr is pointng towards 1st element
 
     *ptr=9;
     ptr++;//moves pointer to next element

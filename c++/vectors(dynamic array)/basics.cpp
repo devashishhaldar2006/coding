@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+//sirf push back krn pr he size badhta h for TC analysis
 int main(){
     vector<int> v;
     v.push_back(6);

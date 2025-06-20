@@ -22,28 +22,29 @@ void swap(int *a,int *b){
     *b=temp;
     return;
 }
-//two pointers approach
-void sortArray(vector <int> &v){
-    int i=0;
-    int j=v.size()-1;
-    while(i<j){
-        if(v[j]<0) j--;
-        if(v[i]>0) i++;
-        if(i>j) break;//breakthrough condition
-        if(v[j]>0 && v[i]<0){
-            swap(v[i],v[j]);
-        }
+void reversePart(int a,int b,vector<int> &v){
+    int i=a;
+    int j=b;
+    while(i<=j){
+        swap(&v[i],&v[j]);
+        i++;
+        j--;
     }
     return;
 }
-
 int main(){
+    int k;
     vector<int> v;
     int n;
     cout<<"enter size of vector:";
     cin>>n;
     input(n,v);
+    cout<<"enter value of k:";
+    cin>>k;
+    if(k>n) k=k%n;//important//rounds eliminate kr rhe ho 
     display(v);
-    sortArray(v);
+    reversePart(0,n-k-1,v);
+    reversePart(n-k,n-1,v);
+    reversePart(0,n-1,v);
     display(v);
 }

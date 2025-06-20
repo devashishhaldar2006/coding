@@ -1,16 +1,16 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
     vector<vector<int>> transpose(vector<vector<int>>& matrix) {
         int m=matrix.size();
         int n=matrix[0].size();
-        vector<vector<int>> t(n,vector<int>(m));
         for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
-                t[i][j]=matrix[j][i];
+            for(int j=i+1;j<m;j++){
+               swap(matrix[i][j],matrix[j][i]);
             }
         }
-        return t;
+        return matrix;
     }
 int main(){
     int n,m;

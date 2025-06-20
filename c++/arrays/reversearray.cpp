@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
 using namespace std;
 void display(vector <int>& a){
     for(int i=0;i<a.size();i++){
@@ -16,31 +15,18 @@ void input(int n,vector <int>& a){
         a.push_back(x);
     }
 }
-void swap(int *a,int *b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-    return;
-}
-void reversePart(int a,int b,vector<int> &v){
-    int i=a;
-    int j=b;
-    while(i<=j){
-        swap(&v[i],&v[j]);
-        i++;
-        j--;
-    }
-}
 int main(){
-    int s,m;
-    vector<int> v;
+    vector<int> v1;
     int n;
     cout<<"enter size of vector:";
     cin>>n;
-    input(n,v);
-    cout<<"enter the index range:";
-    cin>>s>>m;
-    reversePart(s,m,v);
-    display(v);
+    input(n,v1);
+    display(v1);
+    //i+j=n-1
+    vector<int> v2(v1.size());
+    for(int i=0;i<v2.size();i++){
+        v2[i]=v1[v1.size()-1-i];
+    }
+    display(v2);
 
 }

@@ -3,15 +3,19 @@
 #include<algorithm>
 using namespace std;
 int main(){
-    string str="abcdefggtysncsdbfcsufjbngvorbvedur";
+    string str="ab";
     int count=0;
-    for(int i=0;i<str.length()-1;i++){
+    int n=str.length();
+    for(int i=0;i<n-1;i++){
+        if(n==1){
+            break;
+        }
         if(i==0){
             if(str[i]!=str[i+1]){
                 count++;
             }
         }
-        else if(i==str.length()-1){
+        else if(i==n-1){
             if(str[i]!=str[i-1]){
                 count++;
             }

@@ -2,16 +2,16 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
-        int m=matrix.size();
-        int n=matrix[0].size();
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<m;j++){
-               swap(matrix[i][j],matrix[j][i]);
-            }
+vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+    int m=matrix.size();
+    int n=matrix[0].size();
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<m;j++){
+            swap(matrix[i][j],matrix[j][i]);
         }
-        return matrix;
     }
+    return matrix;
+}
 int main(){
     int n,m;
     cout<<"Enter the number of rows: ";

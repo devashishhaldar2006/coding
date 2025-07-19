@@ -5,6 +5,7 @@ using namespace std;
 //O(n2) avg case
 //O(n) best case
 //bubble sort is a stable sort
+//n-1 passes
 //total number of swaps=total no of operations=(n*(n-1))/2
 int main(){
     int arr[]={1,25,1,6,3,21,4242,5,63,2,4,3};

@@ -1,5 +1,6 @@
 #include<iostream>
 //question--two elements are unique baki sb ek bar hai
+//hum bitwise and kr skte hai 1 ke sath yeh check krne ke liye ki last bit 1 hai y 0
 using namespace std;
 void two_unique(int *arr,int n){
     int res=0;

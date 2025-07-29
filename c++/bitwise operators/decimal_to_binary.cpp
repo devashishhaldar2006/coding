@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<cmath>
 using namespace std;
 string decimal_to_binary(int n){
 	string result="";
@@ -15,7 +16,7 @@ string decimal_to_binary(int n){
 	return result;
 }
 int main(){
-	int n=13;
+	int n=27;
 	cout<<decimal_to_binary(n)<<endl;
 	return 0;
 }

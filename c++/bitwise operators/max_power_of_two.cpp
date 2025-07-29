@@ -16,5 +16,6 @@ int max_power_of_two(int n){
 int main(){
 	int n=13;
 	cout<<max_power_of_two(n)<<endl;
+	cout<<max_power_of_two(n)*2<<endl;//just bari power
 	return 0;
 }

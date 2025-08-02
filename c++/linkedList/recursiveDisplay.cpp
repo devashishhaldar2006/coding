@@ -12,18 +12,22 @@ public:
         this->next=NULL;
     }
 };
+//TC=O(N)
+//SC=O(N)
+void display(Node* head){// recursive display
+    if(head==NULL) return;//base case
+    cout<<head->val<<" ";
+    display(head->next);//recursive case
+}
 int main(){
     Node* a= new Node(10);//head of LL
     Node* b= new Node(20);
     Node* c= new Node(30);
-    Node* d= new Node(40);//tail of LL
+    Node* d= new Node(40);
+    Node* e= new Node(50);//tail of LL
     a->next=b;
     b->next=c;
     c->next=d;
-
-    Node* temp=a;
-    while(temp!=NULL){
-        cout<<temp->val<<" ";//value print krdo
-        temp=temp->next;//address dql do
-    }
+    d->next=e;
+    display(a); //head
 }

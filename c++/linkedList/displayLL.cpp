@@ -12,6 +12,14 @@ public:
         this->next=NULL;
     }
 };
+void display(Node* head){//pass by value
+    Node* temp=head;
+    while(temp!=NULL){
+        cout<<temp->val<<" ";
+        temp=temp->next;
+    }
+
+}
 int main(){
     Node* a= new Node(10);//head of LL
     Node* b= new Node(20);
@@ -21,9 +29,6 @@ int main(){
     b->next=c;
     c->next=d;
 
-    Node* temp=a;
-    while(temp!=NULL){
-        cout<<temp->val<<" ";//value print krdo
-        temp=temp->next;//address dql do
-    }
+    display(a); //head
+   
 }

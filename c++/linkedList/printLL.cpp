@@ -18,7 +18,6 @@ int main(){
     Node b(20) ;
     Node c(30);
     Node d(40);
-    d.val=40;
     //forming LL
     a.next=&b; 
     b.next=&c; 

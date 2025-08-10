@@ -21,7 +21,7 @@ int main(){
     b->next=c;
     c->next=d;
 
-    Node* temp=a;
+    Node* temp=a;//head
     while(temp!=NULL){
         cout<<temp->val<<" ";//value print krdo
         temp=temp->next;//address dql do

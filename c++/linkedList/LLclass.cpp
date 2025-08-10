@@ -1,6 +1,4 @@
-
 //Insert at End
-
 #include<iostream>
 using namespace std;
 class Node{

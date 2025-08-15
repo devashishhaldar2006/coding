@@ -7,6 +7,7 @@ void print(unordered_map<int,string>& m){
     }
 }
 int main(){
+    //multimap<pair<int,int>, string>m;
     //keys are unique
     //in built hash-tables
     unordered_map<int,string> m;

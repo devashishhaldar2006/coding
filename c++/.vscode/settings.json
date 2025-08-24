@@ -41,7 +41,8 @@
     "sstream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "cstring": "cpp"
+    "cstring": "cpp",
+    "set": "cpp"
   },
   "code-runner.runInTerminal": true,
   "editor.mouseWheelZoom": true,

@@ -10,20 +10,31 @@ void displayRec(stack<int>& st){
     displayRec(st);
     st.push(x);
 }
-void displayRev(stack<int>& st){
-    if(st.size()==0) return;
+void pushAtBottomRecursive(stack<int>& st,int val){
+    if(st.size()==0) {
+        st.push(val);
+        return;
+    }
     int x=st.top();
     st.pop();
-    displayRev(st);
-    cout<<x<<" ";
+    pushAtBottomRecursive(st,val);
     st.push(x);
 }
-
+void reverse(stack<int>& st){
+    if(st.size()==1) return;
+    int x=st.top();
+    st.pop();
+    reverse(st);
+    pushAtBottomRecursive(st,x);
+}
 int main(){
     stack<int> st;
     st.push(10);
     st.push(20);
     st.push(30);
     st.push(40);
-    displayRev(st);
+    displayRec(st);
+    cout<<endl;
+    reverse(st);
+    displayRec(st);
 }

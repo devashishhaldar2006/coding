@@ -10,6 +10,16 @@ void displayRec(stack<int>& st){
     displayRec(st);
     st.push(x);
 }
+void pushAtBottomRecursive(stack<int>& st,int val){
+    if(st.size()==0) {
+        st.push(val);
+        return;
+    }
+    int x=st.top();
+    st.pop();
+    pushAtBottomRecursive(st,val);
+    st.push(x);
+}
 
 int main(){
     stack<int> st;
@@ -17,5 +27,6 @@ int main(){
     st.push(20);
     st.push(30);
     st.push(40);
+    pushAtBottomRecursive(st,-10);
     displayRec(st);
 }

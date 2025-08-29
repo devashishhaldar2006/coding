@@ -6,5 +6,10 @@ int main(){
          cout<<v[i]<<" ";
    }
    cout<<endl;
-   int *ptr=lower_bound()
+   auto it=lower_bound(v.begin(),v.end(),5);
+   if(it==v.end()){
+    cout<<"Not found!!";
+    return 0;
+   }
+   cout<<(*it)<<endl;
 }

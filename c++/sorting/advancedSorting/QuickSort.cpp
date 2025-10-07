@@ -8,7 +8,7 @@ using namespace std;
 //SC=O(logN)
 //unstable sort//in place sorting
 int partition(int arr[],int si,int ei){
-    int pivotElement=arr[(si+ei)/2];//si//optimised quick sort//randomised pivor point
+    int pivotElement=arr[(si+ei)/2];//si//optimised quick sort//randomised pivot point
     int count=0;
     for(int i=si;i<=ei;i++){
         if(i==(si+ei)/2) continue;

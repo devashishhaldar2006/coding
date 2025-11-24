@@ -15,7 +15,7 @@ public:
         this->yearJoined=yearJoined;
     }
     bool checkDept(Student student1,Student student2){
-        if(student1.dept==student2.dept){
+        if(student1.dept==student2.dept){ 
             return true;
         }
         else{

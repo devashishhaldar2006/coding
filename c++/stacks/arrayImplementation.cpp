@@ -12,8 +12,7 @@ public:
         if(idx==4){
             cout<<"Stack is full"<<endl;
         }
-        idx++;
-        arr[idx]=val;
+        arr[++idx]=val;
     }
     void pop(){
         if(idx==-1){

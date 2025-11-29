@@ -2,6 +2,7 @@
 #include<vector>
 #include<algorithm>
 #include<climits>
+using namespace std;
 
 class Player{
     public://access modifiers
@@ -15,7 +16,6 @@ class Player{
     private://access modifiers
     int health;
 };
-using namespace std;
 
 int main(){
 

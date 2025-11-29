@@ -26,15 +26,6 @@ void nthlevel(Node* root,int curr,int level){
     nthlevel(root->left,curr+1,level);
     nthlevel(root->right,curr+1,level);
 }
-void nthlevelReverse(Node* root,int curr,int level){
-    if(!root) return ;
-    if(curr==level) {
-        cout<<root->val<<" ";
-        return;//optimised return statement
-    }
-    nthlevelReverse(root->right,curr+1,level);
-    nthlevelReverse(root->left,curr+1,level);
-}
 //level order traversal
 
 void levelOrderTraversal(Node* root){
@@ -44,6 +35,15 @@ void levelOrderTraversal(Node* root){
         // nthlevelReverse(root,1,i);
         cout<<endl;
     }
+}
+void nthlevelReverse(Node* root,int curr,int level){
+    if(!root) return ;
+    if(curr==level) {
+        cout<<root->val<<" ";
+        return;//optimised return statement
+    }
+    nthlevelReverse(root->right,curr+1,level);
+    nthlevelReverse(root->left,curr+1,level);
 }
 int main(){
     Node* a=new Node(1);

@@ -47,14 +47,13 @@ public:
         }
     }
     void print(Node* temp){
-        if(temp==NULL) return;
+        if(!temp) return;
         print(temp->next);
         cout<<temp->val<<endl;
     }
     void displayRev(){
         Node* temp=head;
         print(temp);
-        cout<<endl;
     }
 };
 int main(){
@@ -64,8 +63,6 @@ int main(){
     st.push(30);
     st.push(40);
     st.pop();
-    st.display();
-    cout<<endl;
     st.displayRev();
      
 }

@@ -9,6 +9,7 @@ int gcd(int a,int b){
     }
     return hcf;
 }
+
 int main(){
     int a;
     cout<<"enter a:";

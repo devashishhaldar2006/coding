@@ -13,6 +13,7 @@ int max_power_of_two(int n){
 	n=n | (n>>16);
 	return (n+1)>>1;
 }
+
 int main(){
 	int n=13;
 	cout<<max_power_of_two(n)<<endl;

@@ -12,6 +12,7 @@ int binary_to_decimal(string &binary){
     }
     return result;
 }
+
 int main(){
     string str="001101";
     cout<<binary_to_decimal(str)<<endl;

@@ -13,6 +13,7 @@ int min_flip_bits(int x,int y){
 
 }
 
+
 int main() {
 	cout << min_flip_bits(23,32) << endl;
 	return 0;

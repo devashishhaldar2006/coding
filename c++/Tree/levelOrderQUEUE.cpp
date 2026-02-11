@@ -18,9 +18,9 @@ void levelOrderQueue(Node* root){//BFS
     q.push(root);
     while(q.size()){
         Node* temp=q.front();
-        q.pop();
-        cout<<temp->val<<" ";
-        if(temp->left) q.push(temp->left);
+        q.pop();//pop
+        cout<<temp->val<<" ";//ans
+        if(temp->left) q.push(temp->left);//push
         if(temp->right) q.push(temp->right);
     }
     cout<<endl;

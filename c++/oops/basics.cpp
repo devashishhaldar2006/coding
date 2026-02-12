@@ -5,7 +5,7 @@
 using namespace std;
 
 class Player{
-    public://access modifiers
+public:  //access modifiers
     int age;
     void showInfo(){//member function
         cout<<"Info Shown"<<endl;
@@ -13,7 +13,7 @@ class Player{
     void showInfoAgain(){
         cout<<"Info Shown Again"<<endl;
     }
-    private://access modifiers
+private: //access modifiers
     int health;
 };
 

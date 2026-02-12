@@ -14,8 +14,8 @@ public:
 };
 class Queue{//user defined data structure
 public:
-    Node* head = NULL;
-    Node* tail= NULL;
+    Node* head;
+    Node* tail;
     int size;
     Queue(){//constructor
         head=tail=NULL;

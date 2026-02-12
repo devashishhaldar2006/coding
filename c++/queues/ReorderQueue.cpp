@@ -13,6 +13,7 @@ void display(queue<int>& q){
     }
     cout<<endl;
 }
+
 void reorder(queue<int>& q){
     stack<int> st;
     int n=q.size();
@@ -32,9 +33,16 @@ void reorder(queue<int>& q){
         q.pop();
     }
     // Most important step(Interleave one by one)
+    // Interleave one by one by popping from the stack and pushing into the queue,
+    // then popping from the front of the queue and pushing into the queue.
+    // This is done until the stack is empty.
     while(st.size()){
+        // Pop from the stack and push into the queue.
         q.push(st.top());
         st.pop();
+        
+        // Pop from the front of the queue and push into the queue.
+        // This is done to maintain the order of the elements.
         q.push(q.front());
         q.pop();
     }

@@ -1,25 +1,38 @@
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <algorithm> // for std::lower_bound
 using namespace std;
-//jab bhi sorted integer array dia ho smjh jana binary search lagega most cases mein
-//TC=log2(n)
-int search(vector<int>& nums, int target) {
-    int lo=0;
-    int hi=nums.size()-1;
-    bool flag=false;
-    while(lo<=hi){
-        int mid=lo+(hi-lo)/2; //best code
-        if(nums[mid]==target) {
-            flag=true;
-            return nums[mid-1];
+
+// Manual implementation of lower_bound
+int lowerBoundManual(vector<int>& nums, int target) {
+    int lo = 0, hi = nums.size();
+    while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (nums[mid] < target) {
+            lo = mid + 1;
+        } else {
+            hi = mid;
         }
-        else if(nums[mid]<target) lo=mid+1;
-        else hi=mid-1;
     }
-    if(flag==false) return nums[hi];
+    return (lo < nums.size() ? nums[lo] : -1); 
 }
-int main(){
+
+int main() {
     vector<int> v = {1, 2, 4, 5, 9, 15, 18, 21, 24};
-    cout<<search(v,12);
+
+    // Using manual lower_bound
+    cout << "Manual lower_bound for 3: " << lowerBoundManual(v, 3) << endl;
+    cout << "Manual lower_bound for 5: " << lowerBoundManual(v, 5) << endl;
+    cout << "Manual lower_bound for 25: " << lowerBoundManual(v, 25) << endl;
+
+    // Using std::lower_bound
+    auto it1 = lower_bound(v.begin(), v.end(), 3);
+    auto it2 = lower_bound(v.begin(), v.end(), 5);
+    auto it3 = lower_bound(v.begin(), v.end(), 25);
+
+    cout << "std::lower_bound for 3: " << (it1 != v.end() ? *it1 : -1) << endl;
+    cout << "std::lower_bound for 5: " << (it2 != v.end() ? *it2 : -1) << endl;
+    cout << "std::lower_bound for 25: " << (it3 != v.end() ? *it3 : -1) << endl;
+
+    return 0;
 }

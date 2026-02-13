@@ -15,36 +15,37 @@ public:
     }
 };
 
-Node* construct(int arr[],int n){//BFS
-    queue < Node* > q;
-    Node* root=new Node(arr[0]);
+Node* construct(int arr[], int n){
+    if(n == 0 || arr[0] == INT_MIN) return NULL;
+
+    queue<Node*> q;
+    Node* root = new Node(arr[0]);
     q.push(root);
-    int i=1;
-    int j=2;
-    while(q.size() && i<n){
-        Node* temp=q.front();
+
+    int i = 1;
+
+    while(!q.empty() && i < n){
+        Node* temp = q.front();
         q.pop();
-        Node* left;
-        Node* right;
-        temp->left=left;
-        temp->right=right;
-        if(arr[i]!=INT_MIN){
-            left=new Node(arr[i]);
+
+        // Left child
+        if(i < n && arr[i] != INT_MIN){
+            temp->left = new Node(arr[i]);
+            q.push(temp->left);
         }
-        else left=NULL;
-        if(j!=n && arr[j]!=INT_MIN){
-            right=new Node(arr[j]);
+        i++;
+
+        // Right child
+        if(i < n && arr[i] != INT_MIN){
+            temp->right = new Node(arr[i]);
+            q.push(temp->right);
         }
-        else right=NULL;
-        if(left!=NULL) q.push(left);
-        if(right!=NULL) q.push(right);
-        temp->left=left;
-        temp->right=right;
-        i+=2;
-        j+=2;
+        i++;
     }
+
     return root;
-};
+}
+
 int main(){
     int a[]={1,2,INT_MIN,4,INT_MIN,6,7,8,INT_MIN,10};
     int n=sizeof(a)/sizeof(int);

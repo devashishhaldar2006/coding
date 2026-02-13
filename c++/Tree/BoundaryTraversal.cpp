@@ -16,36 +16,36 @@ public:
 };
 
 
-Node* construct(int arr[],int n){//BFS
-    queue < Node* > q;
-    Node* root=new Node(arr[0]);
+Node* construct(int arr[], int n){
+    if(n == 0 || arr[0] == INT_MIN) return NULL;
+
+    queue<Node*> q;
+    Node* root = new Node(arr[0]);
     q.push(root);
-    int i=1;
-    int j=2;
-    while(q.size() && i<n){
-        Node* temp=q.front();
+
+    int i = 1;
+
+    while(!q.empty() && i < n){
+        Node* temp = q.front();
         q.pop();
-        Node* left;
-        Node* right;
-        if(arr[i]!=INT_MIN){
-            left=new Node(arr[i]);
-        }
-        else left=NULL;
 
-        if(j<n && arr[j]!=INT_MIN){
-            right=new Node(arr[j]);
+        // Left child
+        if(i < n && arr[i] != INT_MIN){
+            temp->left = new Node(arr[i]);
+            q.push(temp->left);
         }
-        else right=NULL;
-        temp->left=left;
-        temp->right=right;
-        if(left) q.push(left);
-        if(right) q.push(right);
+        i++;
 
-        i+=2;
-        j+=2;
+        // Right child
+        if(i < n && arr[i] != INT_MIN){
+            temp->right = new Node(arr[i]);
+            q.push(temp->right);
+        }
+        i++;
     }
+
     return root;
-};
+}
 
 void boundaryLeft(Node* root){
     if(!root) return ;

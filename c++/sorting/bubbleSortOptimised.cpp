@@ -23,8 +23,8 @@ int main(){
             }
         }
         if(flag==true){//swap didn't happen
-                break;
-            }
+            break;
+        }
     }
     cout<<endl;
     for(int i=0;i<n;i++){

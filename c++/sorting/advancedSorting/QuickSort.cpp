@@ -20,7 +20,7 @@ int partition(int arr[],int si,int ei){
     int j=ei;
     while(i<pivotIdx && j>pivotIdx){
         if(arr[i]<=pivotElement) i++;
-        else if(arr[i]>pivotElement) j--;
+        else if(arr[j]>pivotElement) j--;
         else{
             swap(arr[i],arr[j]);
             i++;

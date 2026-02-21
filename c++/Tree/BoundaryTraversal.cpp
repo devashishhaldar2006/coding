@@ -47,6 +47,7 @@ Node* construct(int arr[], int n){
     return root;
 }
 
+
 void boundaryLeft(Node* root){
     if(!root) return ;
     if(!root->left && !root->right) return ;
@@ -85,6 +86,6 @@ void boundaryTraversal(Node* root){
 int main(){
     int a[]={1,2,INT_MIN,4,INT_MIN,6,7,8,INT_MIN,10};
     int n=sizeof(a)/sizeof(int);
-    Node* root=construct(a,n);
+ Node* root=construct(a,n);
     boundaryTraversal(root);
 }

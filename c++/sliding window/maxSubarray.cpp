@@ -8,7 +8,7 @@ int main(){
     int n=sizeof(arr)/sizeof(arr[0]);
     int k=4;
     int maxSum=INT_MIN;
-    int maxIdx=0;
+    int maxIdx=0;   
     int sum=0;
     //sliding window algo
     for(int j=0;j<k;j++){

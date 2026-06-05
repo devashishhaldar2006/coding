@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // for std::lower_bound
+#include <algorithm>
 using namespace std;
 
 // Manual implementation of lower_bound

@@ -24,7 +24,7 @@ Node* construct(int arr[], int n){
 
     int i = 1;
 
-    while(!q.empty() && i < n){
+    while(q.size() && i < n){
         Node* temp = q.front();
         q.pop();
 

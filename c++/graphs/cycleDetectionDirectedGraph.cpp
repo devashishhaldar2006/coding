@@ -1,38 +1,33 @@
-#include<bits/stdc++.h>
-using namespace std;
-bool flag;
-void bfs(vector<vector<int>>& graph){
-    int n = graph.size();
-    vector<int> indegree(n,0);
-    for(int i=0;i<n;i++){
-        for(auto ele:graph[i]){
-            indegree[ele]++;
+class Solution {
+  public:
+    bool isCyclic(int V, vector<vector<int>> &edges) {
+        // code here
+        int n=edges.size();
+        vector<vector<int>> adj(V);
+        vector<int> indegree(V,0);
+        for(int i=0;i<n;i++){
+            int a=edges[i][0];
+            int b=edges[i][1];
+            adj[a].push_back(b);
+            indegree[b]++;
         }
-    }
-    queue<int> q;
-    for(int i=0;i<n;i++){
-        if(indegree[i]==0){
-            q.push(i);
+        vector<int> ans;
+        queue<int> q;
+        for(int i=0;i<V;i++){
+            if(indegree[i]==0) q.push(i);
         }
-    }
-    int count=0;
-    while(q.size()){
-        int node=q.front();
-        q.pop();
-        count++;
-        for(auto ele:graph[node]){
-            indegree[ele]--;
-            if(indegree[ele]==0){
-                q.push(ele);
+        while(q.size()){
+            int front=q.front();
+            q.pop();
+            ans.push_back(front);
+            for(auto ele:adj[front]){
+                indegree[ele]--;
+                if(indegree[ele]==0){
+                    q.push(ele);
+                }
             }
         }
+        return ans.size()!=V;
+        
     }
-    if(count!=n) flag=true;
-}
-int main(){
-    flag=false;
-    vector<vector<int>> graph = {{1, 2}, {2}, {3}, {}};
-    bfs(graph);
-    if(flag) cout<<"Cycle is present in the graph";
-    else cout<<"Cycle is not present in the graph";
-}
+};

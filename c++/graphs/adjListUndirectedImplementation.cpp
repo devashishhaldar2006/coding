@@ -4,7 +4,7 @@ void addEdge(vector<vector<int>>& adj,int u,int v){
     adj[u].push_back(v);
     adj[v].push_back(u);
 }
-void printGraph(vector<vector<int>>& adj){
+void printGraph(const vector<vector<int>>& adj){
     for(int i=0;i<adj.size();i++){
         cout<<i<<"->";
         for(auto ele:adj[i]){
